@@ -1,45 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-}
-
-.mortgage-container {
+    background-color: #e0f0f8;
     display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.mortgage-option {
+.container {
+    display: flex;
+    width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left-section {
+    width: 50%;
+    padding: 30px;
+    background-color: #f9faff;
+}
+
+.right-section {
+    width: 50%;
+    background-color: #0e2d3a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 90px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+}
+
+.clear-all {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #00c876;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-columns div {
+    width: 48%;
+    position: relative;
+}
+
+.unit {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.radio-option {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
     padding: 10px;
     border: 2px solid #e0e0e0;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    position: relative;
+    border-radius: 5px;
     cursor: pointer;
-    background-color: #f9f9f9;
 }
 
-.mortgage-option input[type="radio"] {
+.radio-option input[type="radio"] {
     display: none;
 }
 
-.radio-custom {
-    height: 20px;
+.custom-radio {
     width: 20px;
-    border-radius: 50%;
+    height: 20px;
     border: 2px solid #ccc;
-    display: inline-block;
+    border-radius: 50%;
     margin-right: 10px;
     position: relative;
 }
 
-.radio-custom::after {
+.custom-radio::after {
     content: '';
-    height: 12px;
     width: 12px;
-    background-color: #f4f4f4;
+    height: 12px;
+    background-color: transparent;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -47,23 +148,46 @@ body {
     transform: translate(-50%, -50%);
 }
 
-input[type="radio"]:checked + .radio-custom {
+input[type="radio"]:checked + .custom-radio {
     border-color: #ffd700;
 }
 
-input[type="radio"]:checked + .radio-custom::after {
+input[type="radio"]:checked + .custom-radio::after {
     background-color: #ffd700;
 }
 
-.label-text {
+.calculate-btn {
+    background-color: #ffd700;
+    color: #333;
     font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
-.mortgage-option input[type="radio"]:checked ~ .label-text {
-    color: #000;
+.calculate-btn:hover {
+    background-color: #ffcc00;
+}
+
+.results-placeholder {
+    text-align: center;
+    display: none;
+}
+
+.results-placeholder p {
+    margin-bottom: 10px;
+}
+
+.results-placeholder p:first-child {
+    font-size: 20px;
     font-weight: bold;
 }
 
-.mortgage-option input[type="radio"]:not(:checked) ~ .label-text {
-    color: #555;
+.results-placeholder p:last-child {
+    font-size: 14px;
+    color: #b3c3c8;
 }
