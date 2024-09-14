@@ -13,42 +13,63 @@
 </head>
 <body>
 
-  Mortgage Calculator
-  Clear All
+  <div class="mortgage-container">
+    <!-- left part -->
+    <div class="left">
+      <h2>Mortgage Calculator</h2>
+      <p>Clear All</p>
+      <label for="mortgage-amount">Mortgage Amount</label>
+      <br>
+      <input type="number" id="mortgage-amount">
+      <br>
+      <label for="years">Mortgage Term</label>
+      <br>
+      <input type="number" id="years">
+      <br>
+      <label for="interest-rate">Interest Rate</label>
+      <br>
+      <input type="number" id="interest-rate">
+      <br>
+      <label class="mortgage-option">
+        <input type="radio" name="mortgage" checked>
+        <span class="radio-custom"></span>
+        <span class="label-text">Repayment</span>
+      </label>
 
-  Mortgage Amount
+      <label class="mortgage-option">
+        <input type="radio" name="mortgage">
+        <span class="radio-custom"></span>
+        <span class="label-text">Interest Only</span>
+      </label>
+      <button><img src="icon-calculator.svg" alt=""> Calculate Repayment</button>
+    </div>
 
-  Mortgage Term
+    <!-- right part -->
+    <div class="right">
+      <!-- Empty results start -->
+      <div class="right-empty">
+        <img src="illustration-empty.svg">
+        <p>Results shown here</p>
+        <p>Complete the form and click “calculate repayments” to see what 
+        your monthly repayments would be.</p>
+      </div>
+      <!-- Empty results end -->
+       <!-- Completed results start -->
+      <div class="right-results">
+        <p>Your results</p>
+        <p>Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.</p>
+        <div class="result">
+          <p>Your monthly repayments</p>
+          <h1></h1>
+          <hr>
+          <p>Total you'll repay over the term</p>
+          <h3></h3>
+        </div>
+      </div>
+        <!-- Completed results end -->
+    </div>
 
-  Interest Rate
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
   
   </div>
 </body>
