@@ -38,7 +38,7 @@ body {
     padding: 20px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 90px;
+    border-bottom-left-radius: 60px;
 }
 
 .header {
@@ -175,7 +175,7 @@ input[type="radio"]:checked + .custom-radio::after {
 
 .results-placeholder {
     text-align: center;
-    display: none;
+    display: block;
 }
 
 .results-placeholder p {
@@ -184,10 +184,50 @@ input[type="radio"]:checked + .custom-radio::after {
 
 .results-placeholder p:first-child {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .results-placeholder p:last-child {
     font-size: 14px;
     color: #b3c3c8;
+}
+.right-result{
+    display: none;
+}
+.right-result #r-heading{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.amount-result{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: #071b24;
+    border-top:5px solid hsl(88, 78%, 49%);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.amount-result #r-payment{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.amount-result h1{
+    color: hsl(88, 78%, 49%);
+    font-size: 58px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.amount-result hr{
+    margin-bottom: 20px;
+}
+
+.amount-result #r-payment{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
 }
