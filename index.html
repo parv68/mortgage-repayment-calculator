@@ -19,19 +19,19 @@
           <label for="mortgage-amount">Mortgage Amount</label>
           <div class="input-container">
             <span class="currency-symbol">$</span>
-            <input type="text" id="mortgage-amount" placeholder="300">
+            <input type="text" id="mortgage-amount" placeholder="0">
           </div>
         </div>
 
         <div class="form-group two-columns">
           <div>
             <label for="mortgage-term">Mortgage Term</label>
-            <input type="text" id="mortgage-term" placeholder="25">
+            <input type="text" id="mortgage-term" placeholder="0">
             <span class="unit">years</span>
           </div>
           <div>
             <label for="interest-rate">Interest Rate</label>
-            <input type="text" id="interest-rate" placeholder="5.25">
+            <input type="text" id="interest-rate" placeholder="0">
             <span class="unit">%</span>
           </div>
         </div>
@@ -39,12 +39,12 @@
         <div class="form-group">
           <label>Mortgage Type</label>
           <label class="radio-option">
-                    <input type="radio" name="mortgage-type" checked>
-                    <span class="custom-radio"></span>
-                    Repayment
+          <input type="radio" name="mortgage-type" id="repayment-only" checked>
+          <span class="custom-radio"></span>
+          Repayment
           </label>
           <label class="radio-option">
-          <input type="radio" name="mortgage-type">
+          <input type="radio" name="mortgage-type" id="interest-only">
           <span class="custom-radio"></span>
           Interest Only
           </label>
@@ -66,11 +66,11 @@
           <p id="r-heading">Your result</p>
           <p>Your results are shown below based on th einformation you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
           <div class="amount-result">
-            <p id="r-payment">Monthly Repayment:</p>
-            <h1>$1770</h1>
+            <p>Monthly Repayment:</p>
+            <h1>$0</h1>
             <hr>
             <p>Total You'll Repay Over the Term:</p>
-            <p id="r-payment">$5068</p>
+            <p id="r-payment">$0</p>
           </div>
         </div>
       </div>
